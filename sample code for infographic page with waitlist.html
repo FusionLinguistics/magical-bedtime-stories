@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Bedtime Stories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1A1A2E;
+            color: #E0C3FC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('background.png') center/cover no-repeat; 
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 46, 0.7);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 60%;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #FFA500;
+            text-shadow: 3px 3px 15px rgba(224, 195, 252, 0.8);
+        }
+        
+        p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .goal {
+            font-size: 1rem; /* Made goal smaller than the description */
+            font-weight: 400;
+            color: #FFD700;
+            margin-top: 20px;
+            max-width: 70%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .waitlist-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        input[type="email"] {
+            padding: 12px;
+            width: 80%;
+            max-width: 300px;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 1rem;
+            outline: none;
+            background: #fff;
+            color: #333;
+        }
+        
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: #8A2BE2;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        button:hover {
+            background: #6A0DAD;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            font-size: 1rem;
+            border-top: 1px solid #FFD700;
+        }
+        
+        .footer-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 6px;
+            color: #FFD700;
+            text-align: left;
+        }
+        
+        .footer-left p {
+            margin: 0;
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: #FFD700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: #FFD700;
+            color: #121212;
+        }
+        
+        .coming-soon {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Magical Bedtime Stories!</h1>
+            <p>Step into a realm where towering castles, mystical dragons, and endless adventures await. Every bedtime is a new journey into wonder.</p>
+            <p>"Our goal is to spark imagination and wonder through beautifully crafted bedtime stories that transport children and parents into a world of magic, mystery, and adventure. Let every night be an enchanting journey."</p>
+            <p class="coming-soon">Coming Soon!</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-left">
+            <p>© 2025 Luminix Technologies.</p>
+            <p>All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#" class="social-icon">in</a>
+            <a href="#" class="social-icon">X</a>
+            <a href="#" class="social-icon">✉</a>
+        </div>
+    </div>
+</body>
+</html>
