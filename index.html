@@ -3,116 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magical Bedtime Stories</title>
+    <title>Bedtime Stories AI - Join the Magic</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap');
         
         body {
             font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #4a148c, #6a1b9a, #9575cd);
+            color: white;
+            text-align: center;
             margin: 0;
             padding: 0;
-            background: #1A1A2E;
-            color: #E0C3FC;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
+            overflow-x: hidden;
             position: relative;
+            min-height: 100vh;
         }
-        
-        .hero {
+        .container {
+            max-width: 90%;
             width: 100%;
-            height: 100vh;
-            background: url('background.png') center/cover no-repeat; 
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+            margin: 30px auto;
             padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
-        
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(26, 26, 46, 0.7);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 60%;
-        }
-        
         h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: #FFA500;
-            text-shadow: 3px 3px 15px rgba(224, 195, 252, 0.8);
+            font-family: 'Pacifico', cursive;
+            font-size: 2em;
+            color: #ffeb3b;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
         p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #fff;
-            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 300;
+            margin-bottom: 15px;
         }
-        
-        .goal {
-            font-size: 1rem; /* Made goal smaller than the description */
-            font-weight: 400;
-            color: #FFD700;
-            margin-top: 20px;
-            max-width: 70%;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .waitlist-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        input[type="email"] {
+        .signup-form input {
+            width: 90%;
             padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ffeb3b;
+            border-radius: 5px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+        }
+        .signup-form input::placeholder {
+            color: #ffeb3b;
+        }
+        .signup-form button {
+            width: 90%;
+            background-color: #ffeb3b;
+            color: #6a1b9a;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .signup-form button:hover {
+            background-color: #fff176;
+        }
+        .co-creation-image {
             width: 80%;
             max-width: 300px;
-            border: none;
-            border-radius: 25px;
-            text-align: center;
-            font-size: 1rem;
-            outline: none;
-            background: #fff;
-            color: #333;
+            height: auto;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        
-        button {
-            padding: 12px 25px;
-            border: none;
-            background: #8A2BE2;
-            color: #fff;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        .highlight {
+            color: #ffeb3b;
+            font-weight: bold;
         }
-        
-        button:hover {
-            background: #6A0DAD;
+        .pulse {
+            animation: pulse 1.5s infinite;
         }
-        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
         .footer {
-            position: absolute;
+            position: relative;
             bottom: 0;
             width: 100%;
             background: #121212;
@@ -120,68 +98,72 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
-            font-size: 1rem;
+            padding: 15px 20px;
+            font-size: 0.9rem;
             border-top: 1px solid #FFD700;
+            flex-wrap: wrap;
         }
-        
         .footer-left {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            font-size: 6px;
+            font-size: 12px;
             color: #FFD700;
             text-align: left;
         }
-        
         .footer-left p {
-            margin: 0;
+            margin: 5px 0;
         }
-        
         .footer-right {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             align-items: center;
+            flex-wrap: wrap;
         }
-        
         .social-icon {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 40px;
             height: 40px;
-            border: 1px solid #FFD700;
-            border-radius: 5px;
+            border-radius: 50%;
             font-size: 1.2rem;
             color: #FFD700;
+            background: #121212;
+            border: 2px solid #FFD700;
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        
         .social-icon:hover {
             background: #FFD700;
             color: #121212;
         }
-        
-        .coming-soon {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #FFD700;
-            margin-top: 20px;
+        @media (max-width: 600px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-left, .footer-right {
+                text-align: center;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Magical Bedtime Stories!</h1>
-            <p>Step into a realm where towering castles, mystical dragons, and endless adventures await. Every bedtime is a new journey into wonder.</p>
-            <p>"Our goal is to spark imagination and wonder through beautifully crafted bedtime stories that transport children and parents into a world of magic, mystery, and adventure. Let every night be an enchanting journey."</p>
-            <p class="coming-soon">Coming Soon!</p>
-        </div>
+    <div class="container">
+        <h1>✨ Create Magical <span class="highlight">Bedtime Stories</span> with Your Child! ✨</h1>
+        <p>Let AI transform your child's imagination into interactive, illustrated adventures!</p>
+        <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/main/child.png" alt="Parent and Child Co-Creating a Story" class="co-creation-image">
+        <p><strong>Join the waitlist and be the first to unlock magical storytelling!</strong></p>
+        <form class="signup-form">
+            <input type="text" placeholder="Your Name (Optional)">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit" class="pulse">Join the Waitlist Now!</button>
+        </form>
+        <p>No spam, just endless bedtime adventures! 🌙</p>
     </div>
-    
     <div class="footer">
         <div class="footer-left">
             <p>© 2025 LumenixTechnologies.</p>
@@ -190,7 +172,8 @@
         <div class="footer-right">
             <a href="#" class="social-icon">in</a>
             <a href="#" class="social-icon">X</a>
-            <a href="#" class="social-icon">✉</a>
+            <a href="#" class="social-icon">f</a>
+            <a href="#" class="social-icon">📧</a>
         </div>
     </div>
 </body>
