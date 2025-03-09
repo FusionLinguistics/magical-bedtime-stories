@@ -3,178 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedtime Stories AI - Join the Magic</title>
+    <title>Your AI Website</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap');
-        
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #4a148c, #6a1b9a, #9575cd);
-            color: white;
-            text-align: center;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
+            background-color: #ffffff;
+            color: #333;
         }
-        .container {
-            max-width: 90%;
-            width: 100%;
-            margin: 30px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2em;
-            color: #ffeb3b;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        p {
-            font-size: 1.1em;
-            font-weight: 300;
-            margin-bottom: 15px;
-        }
-        .signup-form input {
-            width: 90%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ffeb3b;
-            border-radius: 5px;
-            font-size: 1em;
-            background: rgba(255, 255, 255, 0.2);
+        header {
+            background: url('hero-image.jpg') center/cover no-repeat;
             color: white;
             text-align: center;
-        }
-        .signup-form input::placeholder {
-            color: #ffeb3b;
-        }
-        .signup-form button {
-            width: 90%;
-            background-color: #ffeb3b;
-            color: #6a1b9a;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            font-weight: bold;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        }
-        .signup-form button:hover {
-            background-color: #fff176;
-        }
-        .co-creation-image {
-            width: 80%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 15px;
-            margin: 20px auto;
-            display: block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .highlight {
-            color: #ffeb3b;
-            font-weight: bold;
-        }
-        .pulse {
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .footer {
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            background: #121212;
-            color: #ffffff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            font-size: 0.9rem;
-            border-top: 1px solid #FFD700;
-            flex-wrap: wrap;
-        }
-        .footer-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            font-size: 12px;
-            color: #FFD700;
-            text-align: left;
-        }
-        .footer-left p {
-            margin: 5px 0;
-        }
-        .footer-right {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .social-icon {
+            padding: 125px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            color: #FFD700;
-            background: #121212;
-            border: 2px solid #FFD700;
+            flex-direction: column;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .header-content {
+            max-width: 900px;
+            text-align: center;
+        }
+        .header-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .header-content p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff6600;
+            color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
         }
-        .social-icon:hover {
-            background: #FFD700;
-            color: #121212;
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 60px 5%;
+            background: white;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
         }
-        @media (max-width: 600px) {
-            .footer {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .footer-left, .footer-right {
-                text-align: center;
-                justify-content: center;
-            }
+        .feature img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .feature h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .feature p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .signup {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .signup h2 {
+            font-size: 32px;
+        }
+        input[type="email"] {
+            padding: 15px;
+            width: 80%;
+            max-width: 350px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        button {
+            padding: 15px 30px;
+            background: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e1e1e;
+            color: white;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>✨ Create Magical <span class="highlight">Bedtime Stories</span> with Your Child! ✨</h1>
-        <p>Let AI transform your child's imagination into interactive, illustrated adventures!</p>
-        <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/main/child.png" alt="Parent and Child Co-Creating a Story" class="co-creation-image">
-        <p><strong>Join the waitlist and be the first to unlock magical storytelling!</strong></p>
-        <form class="signup-form">
-            <input type="text" placeholder="Your Name (Optional)">
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit" class="pulse">Join the Waitlist Now!</button>
+    <header>
+        <div class="header-content">
+            <h1 style="color: black;">Your AI-Powered Future</h1>
+            <p style="color: black;">Revolutionizing creativity with AI-driven interactive experiences.</p>
+            <a href="#signup" class="btn">Join the Waitlist</a>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="feature">
+            <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/refs/heads/master/is.png" alt="Interactive Stories">
+            <h3>Interactive Stories Co-Creation</h3>
+            <p>Bring your imagination to life! Co-create unique and engaging stories with our AI, making storytelling more interactive and personalized than ever before.</p>
+        </div>
+        <div class="feature">
+            <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/refs/heads/master/rp.png" alt="Roleplay">
+            <h3>Roleplay</h3>
+            <p>Step into any role and experience AI-powered, dynamic roleplaying that adapts to your creativity. Whether it's fantasy, sci-fi, or mystery, immerse yourself in endless possibilities.</p>
+        </div>
+        <div class="feature">
+            <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/refs/heads/master/CBN.png" alt="Color by Number">
+            <h3>Color by Number</h3>
+            <p>Unleash your inner artist with AI-generated color-by-number images! A fun and relaxing way to express creativity for kids and adults alike.</p>
+        </div>
+        <div class="feature">
+            <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/refs/heads/master/pb.png" alt="Print Books">
+            <h3>Print Books</h3>
+            <p>Turn your digital creations into beautifully printed books. Capture your AI-generated stories and illustrations in a tangible, lasting format.</p>
+        </div>
+        <div class="feature">
+            <img src="https://raw.githubusercontent.com/FusionLinguistics/magical-bedtime-stories/refs/heads/master/sing.png" alt="Sing">
+            <h3>Sing</h3>
+            <p>Sing along with AI-composed songs! Whether it's for fun or professional practice, our AI can generate lyrics and melodies tailored to your style.</p>
+        </div>
+    </section>
+    
+    <section id="signup" class="signup">
+        <h2>Get Early Access</h2>
+        <p>Be the first to explore AI-powered creative experiences. Sign up now!</p>
+        <form id="signup-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Sign Up</button>
         </form>
-        <p>No spam, just endless bedtime adventures! 🌙</p>
-    </div>
-    <div class="footer">
-        <div class="footer-left">
-            <p>© 2025 LumenixTechnologies.</p>
-            <p>All rights reserved.</p>
-        </div>
-        <div class="footer-right">
-            <a href="#" class="social-icon">in</a>
-            <a href="#" class="social-icon">X</a>
-            <a href="#" class="social-icon">f</a>
-            <a href="#" class="social-icon">e</a>
-        </div>
-    </div>
+        <p id="message"></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Your AI Company. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("message").textContent = "Thank you for signing up!";
+        });
+    </script>
 </body>
 </html>
